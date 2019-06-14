@@ -1,0 +1,148 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Weather Forecast</title>
+    
+<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" rel="stylesheet">
+	
+<script src="jQuery/jquery-1.11.2.min.js"></script>
+<script src="jQuery/jquery.mobile-1.4.5.min.js"></script>
+<script src="jQuery/script.js"></script>
+
+</head>
+ 
+<body> 
+
+<div data-role="page" id="page" data-theme="a">
+    <div data-role="header">
+        <h1>Weather Forecast</h1>
+    </div>
+    <!--<div data-role="content">-->
+    <div data-role="main" class="ui-content">	
+        <ul data-role="listview">
+            <li><a href="#page2">Weather Forecast(XML)</a></li>
+            <li><a href="#page3">Weather Forecast(JSON) With Display Setting</a></li>
+        </ul>		
+   </div>
+   <div data-role="footer">
+        <h4>Dapeng Zhang 100612354</h4>
+   </div>
+</div>
+    
+<div data-role="page" id="page2">
+    <div data-role="header" data-add-back-btn="true">
+        <h1>Weather Forecast(XML)</h1>
+    </div>
+    <!--<div data-role="content">-->
+    <div data-role="main" class="ui-content">	
+         <section id="searchForm" class="searchForm">
+	   		
+			<input type="text" id="query" autocomplete="off" placeholder="Enter an Australian city ..." />
+			
+			<div data-role="fieldcontain">
+				<div data-role="controlgroup" data-type="horizontal">
+				<input type="radio" name="radTemp" id="radTempC" checked="checked" />
+				<label for="radTempC">&deg;C</label>
+				<input type="radio" name="radTemp" id="radTempF"  />
+				<label for="radTempF">&deg;F</label>
+				<input type="radio" name="radTemp" id="radTempK"  />
+				<label for="radTempK">&deg;K</label>
+				</div>
+			</div>
+			
+			<input type="button" data-inline="true" value="Get Weather" id="weatherBtn" />
+			
+	   </section>
+	   
+	   <section id="loading" class="loading">
+	   		<img src="images/ajax-loader.gif" alt="wait" />
+	   </section>
+	   
+	   <section id="results" class="results">
+	   
+	   		<p id="city" class="city"></p>
+	   		<div id="theResults" class="row"></div>
+			
+	   </section>	
+    </div>
+    <div data-role="footer"> 
+        <h4>Dapeng Zhang 100612354</h4>    
+    </div>
+</div>
+    
+<div data-role="page" id="page3">
+    <div data-role="header" data-add-back-btn="true">
+         <h1>Weather Forecast(JSON)</h1>
+    </div>
+    <!--<div data-role="content">-->
+    <div data-role="main" class="ui-content">	
+         <section id="searchFormJSON" class="searchForm">
+           <div data-role="fieldcontain">
+             <label for="queryJSON">Enter an Australian City:</label>
+             <input type="text" name="queryJSON" id="queryJSON" value="Melbourne"  />
+           </div>
+	   		
+			
+			<div data-role="fieldcontain">
+				<div data-role="controlgroup" data-type="horizontal">
+				<input type="radio" name="radTemp" id="radTempCJSON" checked="checked" />
+				<label for="radTempCJSON">&deg;C</label>
+				<input type="radio" name="radTemp" id="radTempFJSON"  />
+				<label for="radTempFJSON">&deg;F</label>
+				<input type="radio" name="radTemp" id="radTempKJSON"  />
+				<label for="radTempKJSON">&deg;K</label>
+				</div>
+			</div>
+			
+			<input type="button" data-inline="true" value="Get Weather" id="weatherBtnJSON" />
+			<i class="fas fa-cog" title="Display Preference"></i>
+			
+	   </section>
+		<div class="setting">
+         <div data-role="fieldcontain">
+           <label for="txtBGColor">Background:</label>
+           <input type="color" name="txtBGColor" id="txtBGColor" value="#FFFFFF"/>
+         </div>
+
+		 <p>Text:</p>
+         <input type="text" class="targetInfo" readonly placeholder="Click a target below to customize"/>
+         <div data-role="fieldcontain">
+           <label for="txtFontColor">Font color:</label>
+           <input type="color" name="txtFontColor" id="txtFontColor" value="#000000"/>
+         </div>
+         
+         <div data-role="fieldcontain">
+           <label for="txtFontSize">Font size:</label>
+           <input type="number" name="txtFontSize" id="txtFontSize" value = "12" max="20" min="8" step="1" />
+         </div>
+			
+         <div class="preferenceBtn">
+			 	<i class="fa fa-times"></i>
+			 	<button id="savePrefer" >Save</button>
+			 	<button id="resetPrefer" >Reset</button>
+		 </div>
+    </div>
+	   
+	   <section id="loadingJSON" class="loading">
+	   		<img src="images/ajax-loader.gif" alt="wait" />
+	   </section>
+	   
+	   <section id="resultsJSON" class="results">
+	   
+	   		<p id="cityJSON" class="city"></p>
+	   		<div id="theResultsJSON" class="row"></div>
+			
+	   </section>		
+    </div>
+    <div data-role="footer">
+        <h4>Dapeng Zhang 100612354</h4>
+  	</div>
+</div>
+	
+	
+</body>
+</html>

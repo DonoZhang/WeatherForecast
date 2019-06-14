@@ -1,0 +1,109 @@
+
+	body{
+		overflow-y: scroll;
+	}
+	div[data-role="footer"]{
+		position: absolute;
+		bottom: 0;
+		width: 100vw;
+	}
+	div[data-role = "main"]{
+		text-align: center;
+	}
+	.searchForm{
+		margin:20px;
+		text-align: center;
+	}
+	.fa-cog{
+		position: absolute;
+		font-size: 30px;
+		padding: 8px;
+		cursor: pointer;
+	}
+	.fa-cog:hover{
+	  animation-name: rotate; 
+      animation-duration: 2s; 
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+	}
+
+	@keyframes rotate {
+	  from {transform: rotate(0deg);}
+      to {transform: rotate(360deg);}
+	}
+	.fa-times{
+		font-size:30px;
+		padding:8px;
+		position:relative;
+		left: -10%;
+		width: 0;
+		cursor: pointer;
+	}
+	.ui-controlgroup-horizontal .ui-controlgroup-controls {
+		width: auto;
+		float: none;
+	}
+	.ui-btn-inline{
+		margin: auto;
+	}
+	.results{
+		border-color: aqua;
+	}
+	.city{
+		color:#F47983;
+		font-size: 20px;
+		font-weight: bold;
+	}
+	#theResultsJSON{
+		width: 90%;
+		margin: auto;
+	}
+	.time{
+		color:#000077;
+		font-size: 16px;
+		font-weight: bold;
+	}
+	input[type=text]{
+		text-align: center;
+	}
+	.searchForm div[data-role=fieldcontain]:first-of-type{
+		width: 62%;
+		margin-left: 13%; 
+	}
+	.setting{
+		display: none;
+		vertical-align: bottom;
+	}
+	.targetInfo{
+		height: 50px;
+	}
+	.temperature{
+		font-size: 50px;
+		font-weight: bold;
+		color:red;
+	}
+	.oneAnswer{
+		font-size: 12px;
+		padding-bottom: 40px;
+	}
+	.results{
+		display:none;
+		text-align: center;
+	}
+	.loading{
+		display: none;
+		position: absolute;
+		padding-top: 10em;
+		left:50%;
+	}
+	.loading img{
+		position:relative;
+		left:-50%;
+	}
+	.preferenceBtn{
+		text-align: center;
+	}
+	.preferenceBtn button{
+		width: 200px;
+		display: inline-block;
+	}
