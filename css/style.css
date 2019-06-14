@@ -16,6 +16,7 @@
 	}
 	.fa-cog{
 		position: absolute;
+		left: 50px;
 		font-size: 30px;
 		padding: 8px;
 		cursor: pointer;
